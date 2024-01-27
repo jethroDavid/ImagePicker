@@ -76,14 +76,14 @@ static NSString * const CollectionCellReuseIdentifier = @"CollectionCell";
     //if (self.picker.showsCancelButton)
     {
         self.navigationItem.leftBarButtonItem =
-        [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"picker.navigation.cancel-button", @"GMImagePicker",@"Cancel")
+        [[UIBarButtonItem alloc] initWithTitle:@"Cancel"
                                          style:UIBarButtonItemStylePlain
                                         target:self.picker
                                         action:@selector(dismiss:)];
     }
     
     self.navigationItem.rightBarButtonItem =
-    [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"picker.navigation.done-button", @"GMImagePicker",@"Done")
+    [[UIBarButtonItem alloc] initWithTitle:@"Done"
                                      style:UIBarButtonItemStyleDone
                                     target:self.picker
                                     action:@selector(finishPickingAssets:)];
