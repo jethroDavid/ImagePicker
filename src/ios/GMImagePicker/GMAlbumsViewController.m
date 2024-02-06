@@ -124,7 +124,7 @@ static NSString * const CollectionCellReuseIdentifier = @"CollectionCell";
     //PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
     PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:nil];
     self.collectionsFetchResults = @[topLevelUserCollections, smartAlbums];
-    self.collectionsLocalizedTitles = @[NSLocalizedStringFromTable(@"picker.table.user-albums-header", @"GMImagePicker",@"Albums"), NSLocalizedStringFromTable(@"picker.table.smart-albums-header", @"GMImagePicker",@"Smart Albums")];
+    self.collectionsLocalizedTitles = @[@"Albums", @"Smart Albums"];
     
     [self updateFetchResults];
     
@@ -163,7 +163,7 @@ static NSString * const CollectionCellReuseIdentifier = @"CollectionCell";
         
         PHFetchResult *assetsFetchResult = [PHAsset fetchAssetsWithOptions:options];
         [allFetchResultArray addObject:assetsFetchResult];
-        [allFetchResultLabel addObject:NSLocalizedStringFromTable(@"picker.table.all-photos-label", @"GMImagePicker",@"All photos")];
+        [allFetchResultLabel addObject:@"All photos"];
     }
     
     //User albums:
